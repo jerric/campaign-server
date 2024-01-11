@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.lliira.game.campaign.storage.db.UserMapper">
+
+    <resultMap id="UserResultMap" type="User">
+        <constructor>
+            <idArg column="user_id" javaType="long"/>
+        </constructor>
+        <result property="email" column="email"/>
+        <result property="password" column="hashed_password"/>
+        <result property="name" column="user_name"/>
+        <result property="activated" column="is_activated"/>
+        <result property="registeredTime" column="registered_time"/>
+    </resultMap>
+
+    <select id="selectNextUserId" resultType="long">
+        SELECT nextval('user_sequence')
+    </select>
+
+    <insert id="insertUser" parameterType="User">
+        INSERT INTO users (user_id, email, password, user_name, is_activated, registered_time)
+        VALUES (#{id}, #{email}, #{passwordHashed}, #{name}, #{activated}, #{registeredTime})
+    </insert>
+
+    <delete id="deleteUser">
+        DELETE FROM users WHERE user_id = #{userId}
+    </delete>
+
+    <select id="selectUserById" resultMap="UserResultMap">
+        SELECT * FROM users WHERE user_id = #{userId}
+    </select>
+
+    <select id="selectUserByEmail" resultMap="UserResultMap">
+        SELECT * FROM users WHERE email = #{email}
+    </select>
+</mapper>
