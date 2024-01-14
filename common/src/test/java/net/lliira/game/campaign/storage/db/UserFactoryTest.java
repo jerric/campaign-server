@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class UserFactoryTest {
+public class UserFactoryTest extends DbTestBase {
 
   private final UserFactory userFactory = DbStorage.DB_STORAGE.getUserFactory();
 

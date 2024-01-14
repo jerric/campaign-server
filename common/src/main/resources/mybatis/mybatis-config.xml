@@ -3,7 +3,14 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <properties resource="game-campaign.properties"/>
+    <properties resource="game-campaign.properties">
+        <!-- default values to connect to embedded test DB -->
+        <property name="db_driver" value="org.h2.Driver"/>
+        <property name="db_url"
+                  value="jdbc:h2:mem:test;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH"/>
+        <property name="db_username" value=""/>
+        <property name="db_password" value=""/>
+    </properties>
     <typeAliases>
         <typeAlias type="net.lliira.game.campaign.model.User" alias="User"/>
     </typeAliases>
@@ -11,7 +18,7 @@
         <environment id="development">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
-                <property name="driver" value="org.postgresql.Driver"/>
+                <property name="driver" value="${db_driver}"/>
                 <property name="url" value="${db_url}"/>
                 <property name="username" value="${db_username}"/>
                 <property name="password" value="${db_password}"/>
@@ -19,6 +26,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="mybatis/user-mapper.xml" />
+        <mapper resource="mybatis/user-mapper.xml"/>
     </mappers>
 </configuration>

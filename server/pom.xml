@@ -14,6 +14,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>net.lliira.game.campaign</groupId>
+            <artifactId>lliira-game-campaign-common</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
