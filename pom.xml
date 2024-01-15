@@ -20,7 +20,12 @@
 
     <dependencyManagement>
         <dependencies>
-             <dependency>
+            <dependency>
+                <groupId>net.lliira.game.campaign</groupId>
+                <artifactId>lliira-game-campaign-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.13.2</version>

@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>lliira-game-campaign-common</artifactId>
-    <version>${project.parent.version}</version>
+    <version>1.0.0.0</version>
     <name>lliira-game-campaign-common</name>
 
     <dependencies>
