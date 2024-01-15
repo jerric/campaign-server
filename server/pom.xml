@@ -9,14 +9,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>lliira-game-campaign-server</artifactId>
-    <version>${parent.version}</version>
+    <version> ${project.parent.version}</version>
     <name>lliira-game-campaign-server</name>
 
     <dependencies>
         <dependency>
             <groupId>net.lliira.game.campaign</groupId>
             <artifactId>lliira-game-campaign-common</artifactId>
-            <version>${parent.version}</version>
+            <version> ${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
