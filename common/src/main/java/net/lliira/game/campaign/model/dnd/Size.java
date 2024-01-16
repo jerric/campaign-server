@@ -10,7 +10,7 @@ public enum Size {
 
   private final float spaceInFeet;
 
-  private Size(float spaceInFeet) {
+  Size(float spaceInFeet) {
     this.spaceInFeet = spaceInFeet;
   }
 

@@ -16,7 +16,7 @@ public enum Alignment {
 
     private final String label;
 
-    private Alignment(String label) {
+    Alignment(String label) {
         this.label = label;
     }
 

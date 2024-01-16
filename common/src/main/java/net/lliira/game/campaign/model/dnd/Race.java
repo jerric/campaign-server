@@ -18,9 +18,11 @@ public class Race {
     }
 
     private String label;
+    private String parentRace;
     private AgeRange ageRange;
     private Names names;
     private Map<Ability, Integer> abilityIncreases;
     private List<Alignment> alignments;
-
+    private Map<SpeedType, Integer> speeds;
+    private List<Language> languages;
 }
