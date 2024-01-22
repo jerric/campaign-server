@@ -1,4 +1,4 @@
-package net.lliira.game.campaign.model.dnd;
+package net.lliira.game.campaign.common.model.dnd;
 
 public enum Ability {
     Strength,

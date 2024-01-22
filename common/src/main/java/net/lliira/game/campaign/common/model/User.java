@@ -1,4 +1,4 @@
-package net.lliira.game.campaign.model;
+package net.lliira.game.campaign.common.model;
 
 import java.util.Date;
 

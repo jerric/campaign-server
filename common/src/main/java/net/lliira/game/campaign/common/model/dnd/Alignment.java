@@ -1,4 +1,4 @@
-package net.lliira.game.campaign.model.dnd;
+package net.lliira.game.campaign.common.model.dnd;
 
 /**
  * The alignment of a charactor represents their moral attitude toward other people.

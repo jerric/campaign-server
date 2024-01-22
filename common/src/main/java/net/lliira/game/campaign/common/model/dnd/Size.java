@@ -1,4 +1,4 @@
-package net.lliira.game.campaign.model.dnd;
+package net.lliira.game.campaign.common.model.dnd;
 
 public enum Size {
   Tiny(2.5F),

@@ -1,13 +1,13 @@
-package net.lliira.game.campaign.storage.db;
+package net.lliira.game.campaign.common.storage.db;
 
-import net.lliira.game.campaign.model.User;
+import net.lliira.game.campaign.common.model.User;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class UserFactoryTest extends DbTestBase {
 
-  private final UserFactory userFactory = DbStorage.DB_STORAGE.getUserFactory();
+  private final UserFactory userFactory = dbStorage.getUserFactory();
 
   @Test
   public void createUser() {

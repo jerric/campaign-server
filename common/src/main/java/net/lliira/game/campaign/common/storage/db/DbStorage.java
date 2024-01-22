@@ -1,7 +1,9 @@
-package net.lliira.game.campaign.storage.db;
+package net.lliira.game.campaign.common.storage.db;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Properties;
+
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
@@ -9,17 +11,15 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 public class DbStorage {
   private static final String DB_CONFIG_FILE = "mybatis/mybatis-config.xml";
 
-  public static final DbStorage DB_STORAGE = new DbStorage();
-
   private final SqlSessionFactory sessionFactory;
 
   private final Object userFactoryLock = new Object();
   private UserFactory userFactory;
 
-  private DbStorage() {
+  public DbStorage(Properties properties) {
     try {
       InputStream inputStream = Resources.getResourceAsStream(DB_CONFIG_FILE);
-      sessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+      sessionFactory = new SqlSessionFactoryBuilder().build(inputStream, properties);
     } catch (IOException e) {
       throw new RuntimeException(e);
     }

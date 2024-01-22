@@ -1,8 +1,6 @@
-package net.lliira.game.campaign.storage.db;
+package net.lliira.game.campaign.common.storage.db;
 
-import net.lliira.game.campaign.model.User;
-
-import java.util.Date;
+import net.lliira.game.campaign.common.model.User;
 
 /** MyBatis Mapper to provide user related operations. */
 public interface UserMapper {
